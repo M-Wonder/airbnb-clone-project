@@ -28,3 +28,13 @@ LEFT JOIN reviews r
 
 /*full outer join*/
 
+SELECT 
+    u.user_id,
+    u.name AS user_name,
+    b.booking_id,
+    b.start_date,
+    b.end_date,
+    b.status
+FROM users u
+FULL OUTER JOIN bookings b 
+    ON u.user_id = b.user_id;
